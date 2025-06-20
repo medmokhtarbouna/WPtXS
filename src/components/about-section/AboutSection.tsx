@@ -1,0 +1,81 @@
+// src/components/AboutSection.tsx
+import React from "react";
+import { Zap, Cpu, Users, Globe } from "lucide-react";
+
+const features = [
+  {
+    Icon: Zap,
+    title: "Green Hydrogen Revolution",
+    description:
+      "Explore cutting-edge technologies transforming renewable energy into sustainable hydrogen solutions.",
+  },
+  {
+    Icon: Cpu,
+    title: "Power-to-X Innovation",
+    description:
+      "Discover how excess renewable energy is being converted into valuable chemicals, fuels, and materials.",
+  },
+  {
+    Icon: Users,
+    title: "Global Collaboration",
+    description:
+      "Connect with industry leaders, researchers, and policymakers driving the energy transition.",
+  },
+  {
+    Icon: Globe,
+    title: "African Energy Future",
+    description:
+      "Unlock Africa's renewable energy potential and its role in the global green hydrogen economy.",
+  },
+];
+
+export default function AboutSection() {
+  return (
+    <section
+      id="about"
+      className="relative py-20 bg-base-main dark:bg-base-card transition-colors duration-300"
+    >
+      {/* Subtle radial spotlight */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.1),transparent)]" />
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+        <h2 className="font-bold text-3xl md:text-4xl text-base-text">
+          About the Summit
+        </h2>
+        <div className="mx-auto mb-8 h-1 w-24 bg-gradient-to-r from-green-400 to-blue-400 rounded-full" />
+        <p className="mx-auto max-w-2xl text-base-muted leading-relaxed">
+          The World Power-to-X Summit 2025 brings together the global energy
+          community in Marrakesh to accelerate the transition to sustainable
+          energy systems through innovative Power-to-X technologies and green
+          hydrogen solutions.
+        </p>
+
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map(({ Icon, title, description }, i) => (
+            <div
+              key={i}
+              className="
+                bg-white/10 dark:bg-white/5
+                backdrop-blur-sm
+                border border-white/20 dark:border-white/10
+                rounded-xl px-6 py-8
+                 duration-300
+                hover:scale-[1.03] hover:backdrop-blur-md
+                hover:cursor-pointer
+                transform transition-transform
+              "
+            >
+              <Icon className="mx-auto mb-4 w-10 h-10 text-teal-400" />
+              <h3 className="text-xl font-semibold text-white dark:text-base-text mb-3">
+                {title}
+              </h3>
+              <p className="text-sm text-white/80 dark:text-base-muted leading-snug">
+                {description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
