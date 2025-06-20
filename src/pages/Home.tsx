@@ -2,6 +2,7 @@ import AboutSection from "@/components/about-section/AboutSection";
 import GlassNavbar from "../components/GlassNavbar";
 import HeroSection from "../components/hero-section/HeroSection";
 import FAQSection from "@/components/faq-section/FAQSection";
+import SponsorForm from "@/components/sponsor-form/SponsorForm";
 // import Header from "./components/Header";
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
           <HeroSection />
           <AboutSection />
           <FAQSection />
+          <SponsorForm />
         </main>
         {/* <Navbar /> */}
         <main>

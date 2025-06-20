@@ -1,6 +1,7 @@
 // src/components/GlassNavbar.tsx
 import { useState, useEffect } from "react";
 import { Sun, Moon } from 'lucide-react';
+import { Button } from "./ui/button";
 
 
 export default function GlassNavbar() {
@@ -87,10 +88,18 @@ export default function GlassNavbar() {
           {/* Register CTA */}
           <a
             href="#register"
-            className="hidden md:inline-flex btn-gradient px-5 py-2.5 text-sm font-semibold"
+            className="hidden md:inline-flex btn-gradient px-5 py-2.5 text-sm font-semibold rounded-xl"
           >
             Register Now
           </a>
+          {/* <Button
+              size="lg"
+              className="
+              
+             bg-teal-300/40 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl hover:bg-teal-300/50"
+            >
+              Register Now
+            </Button> */}
         </div>
       </nav>
     </header>

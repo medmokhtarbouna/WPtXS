@@ -95,14 +95,21 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center ">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-green-500 to-blue-700 hover:from-green-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
+              className="
+              
+             bg-teal-300/40 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl hover:bg-teal-300/50"
             >
               Register Now
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300"
+              // variant="outline"
+              className="
+              
+              border-white/30
+             bg-white/10 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl hover:bg-white/20
+             border 
+             "
             >
               View Agenda
             </Button>

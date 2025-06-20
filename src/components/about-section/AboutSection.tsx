@@ -1,5 +1,4 @@
 // src/components/AboutSection.tsx
-import React from "react";
 import { Zap, Cpu, Users, Globe } from "lucide-react";
 
 const features = [
