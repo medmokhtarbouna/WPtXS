@@ -59,7 +59,7 @@ export default function SponsorForm() {
 
   const inputClass = `
     w-full px-4 py-2 bg-base-card dark:bg-white/5 backdrop-blur-sm
-    border border-base-border dark:border-white/20 rounded-lg
+    border border-teal-300 dark:border-white/20 rounded-lg
     text-base-text dark:text-white
     focus:outline-none focus:ring-2 focus:ring-teal-300
     transition-colors duration-200

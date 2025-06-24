@@ -1,9 +1,11 @@
 // src/components/HeroSection.tsx
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
-import CountdownTimer from "../CountdownTimer";
+import CountdownTimer from "./CountdownTimer";
 import EventInfo from "./EventInfo";
 
 const HeroSection = () => {
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       {/* Background Image */}
@@ -13,8 +15,8 @@ const HeroSection = () => {
       />
 
       {/* Semi-transparent overlay */}
-      <div className="absolute inset-0  bg-a " />
-      <div className="hero-bg-a absolute inset-0">
+      <div className={"absolute inset-0 bg-b dark:bg-a "} />
+      <div className="dark:bg-black/70 bg-black/30  absolute inset-0">
         {/* Animated gradient blobs */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-green-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
@@ -72,11 +74,11 @@ const HeroSection = () => {
           </div>
 
           <div className="flex justify-center mt-4">
-            <EventInfo date="March 15–16, 2025" location="Marrakesh, Morocco" />
+            <EventInfo date="1-2 October, 2025" location="Marrakesh, Morocco" />
           </div>
           {/* Countdown Timer */}
           <div className="py-4">
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {/* <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <div className="text-center w-full md:w-[600px]">
                 <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 transition-colors duration-300">
                   <div className="text-2xl sm:text-3xl lg:text-3xl font-bold text-white mb-1 ">
@@ -87,7 +89,8 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <CountdownTimer/>
             {/* <CountdownTimer /> */}
           </div>
 
@@ -97,7 +100,14 @@ const HeroSection = () => {
               size="lg"
               className="
               
-             bg-teal-300/40 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl hover:bg-teal-300/50"
+              text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl 
+             
+             
+              btn-gradient 
+             
+             "
+            
+            
             >
               Register Now
             </Button>

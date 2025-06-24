@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 // src/components/AboutSection.tsx
 import { Zap, Cpu, Users, Globe } from "lucide-react";
 
@@ -27,29 +34,22 @@ const features = [
       "Unlock Africa's renewable energy potential and its role in the global green hydrogen economy.",
   },
 ];
- // bg-base-main 
-//  bg-[#FAFCFD]
-export default function AboutSection() {
+
+export default function ABS() {
   return (
     <section
       id="about"
-      className="relative py-20 
-      
-     bg-[#f1f5f7]
-      
-      
-
-      dark:bg-[#111827] transition-colors duration-300"
+      className="relative py-20 bg-white dark:bg-base-card transition-colors duration-300"
     >
       {/* Subtle radial spotlight */}
-      <div className="pointer-events-none absolute inset-0 dark:bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.1),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.05),transparent)]" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <h2 className="font-bold text-3xl md:text-4xl text-base-text">
+        <h2 className="font-bold text-3xl md:text-4xl text-base-text dark:text-white">
           About the Summit
         </h2>
         <div className="mx-auto mb-8 h-1 w-24 bg-gradient-to-r from-green-400 to-blue-400 rounded-full" />
-        <p className="mx-auto max-w-2xl text-base-muted leading-relaxed dark:text-white/90 ">
+        <p className="mx-auto max-w-2xl text-base-muted dark:text-white/90 leading-relaxed">
           The World Power-to-X Summit 2025 brings together the global energy
           community in Marrakesh to accelerate the transition to sustainable
           energy systems through innovative Power-to-X technologies and green
@@ -63,20 +63,11 @@ export default function AboutSection() {
               className="
                 bg-white/80 dark:bg-white/5
                 backdrop-blur-sm
-
-                border
-                 border-teal-300 dark:border-white/10
+                border border-gray-200 dark:border-white/20
                 rounded-xl px-6 py-8
-                 duration-300
-                hover:scale-[1.03] hover:backdrop-blur-md
-                hover:cursor-pointer
-                transform transition-transform
-                shadow-lg
-                shadow-gray-500/10
-                hover:shadow-teal-500/20
-                
-                dark:shadow-none
-                "
+                transform transition
+                hover:scale-105 hover:backdrop-blur-md hover:cursor-pointer
+              "
             >
               <Icon className="mx-auto mb-4 w-10 h-10 text-teal-500 dark:text-teal-400" />
               <h3 className="text-xl font-semibold text-base-text dark:text-white mb-3">
@@ -92,6 +83,3 @@ export default function AboutSection() {
     </section>
   );
 }
-
-
-

@@ -85,7 +85,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-base-main dark:bg-base-card transition-colors duration-300">
+    <section id="faq" className="py-24 bg-[#FAFCFD] dark:bg-[#111827] transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className=" text-center text-base-text dark:text-white mb-8
         
@@ -111,7 +111,7 @@ export default function FAQSection() {
             filtered.map(({ id, question, answer }) => {
               const open = openId === id;
               return (
-                <div key={id} className="overflow-hidden rounded-xl border border-base-border dark:border-white/20 shadow-sm hover:shadow-md transition-shadow">
+                <div key={id} className="overflow-hidden rounded-xl border border-teal-300 dark:border-white/20 shadow-sm hover:shadow-md transition-shadow">
                   <button
                     onClick={() => setOpenId(open ? null : id)}
                     id={`header-${id}`}
@@ -148,7 +148,11 @@ export default function FAQSection() {
                           }
                         }}
                         disabled={!!votes[id]}
-                        className="flex items-center gap-1 text-teal-400 hover:text-teal-300 transition"
+                        className="flex items-center gap-1 text-teal-500 
+                        dark:text-teal-400 
+                        dark:hover:text-teal-300 transition
+                        
+                        "
                       >
                         <ThumbsUp className="w-4 h-4" />
                         {votes[id] ? "Thanks!" : "Helpful?"}
@@ -156,7 +160,9 @@ export default function FAQSection() {
                       <button
                         onClick={() => handleFeedback(id)}
                         disabled={!!feedbackGiven[id]}
-                        className="flex items-center gap-1 text-cyan-300 hover:text-cyan-200 transition"
+                        className="flex items-center gap-1 
+                        text-cyan-500 
+                        dark:text-cyan-300 dark:hover:text-cyan-200 transition"
                       >
                         <MessageSquare className="w-4 h-4" />
                         {feedbackGiven[id] ? "Feedback sent" : "Give feedback"}
@@ -175,7 +181,7 @@ export default function FAQSection() {
         <div className="mt-12 text-center">
           <button
             onClick={handleAddQuestion}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-300/20 text-white rounded-xl hover:opacity-90  hover:bg-teal-300/30 backdrop-blur-sm transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl hover:opacity-90  hover:bg-teal-400 backdrop-blur-sm transition-all duration-300"
           >
             <PlusCircle className="w-5 h-5" />
             Add a Question

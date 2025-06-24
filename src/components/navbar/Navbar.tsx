@@ -1,7 +1,7 @@
 // src/components/GlassNavbar.tsx
 import { useState, useEffect } from "react";
 import { Sun, Moon } from 'lucide-react';
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 
 export default function GlassNavbar() {
@@ -34,14 +34,21 @@ export default function GlassNavbar() {
       className={`
         fixed inset-x-0 top-0 z-50 transition-all duration-300
         ${scrolled
-          ? "bg-white/10 dark:bg-black/30 backdrop-blur-md border-b border-white/20 dark:border-white/10 shadow-sm"
-          : "bg-transparent border-none"}
+          ? "bg-white/90 dark:bg-black/30    backdrop-blur-md border-b border-teal-300/50 dark:border-white/10 shadow-lg dark:shadow-sm dark:text-white text-gray-950 "
+          : "bg-transparent border-none text-white"}
       `}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-white">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 ">
         {/* Logo */}
         <a href="#" className="text-xl font-bold">
-            <img src="./logo-w.png" className="h-9" alt="" />
+          {scrolled
+          ? (localStorage.theme == "dark"?
+          
+          <img src="./logo-w.png" className="h-9" alt="" /> : <img src="./logo.svg" className="h-9" alt="" />)
+          : <img src="./logo-w.png" className="h-9" alt="" /> }
+
+      
+           
           {/* <span className="bg-gradient-to-br from-green-400 to-blue-400 bg-clip-text text-transparent">
             P2X
           </span>{" "}
@@ -67,13 +74,20 @@ export default function GlassNavbar() {
           <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle dark mode"
-            className="text-white/90 hover:text-white transition-colors duration-200"
+           
+            className={`
+         transition-colors duration-200
+        ${scrolled
+          ? "dark:text-white text-gray-950 "
+          : "text-white"}
+      `}
+            
           >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
           {/* Mobile menu button */}
-          <button className="md:hidden text-white/90 hover:text-white transition-colors duration-200">
+          <button className="md:hidden text-white/90 hover:text-white transition-colors duration-200  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

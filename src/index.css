@@ -142,10 +142,9 @@
 }
 
 
+@layer utilities {
 
-/* ضع هذه القواعد على الصنف الذي تريد تطبيق الخلفية عليه */
 .bg-a {
-  /* تدرّج الخلفية من الزاوية اليسرى العليا إلى اليمنى السفلى */
   background-image: linear-gradient(
     to bottom right,
     rgba(5, 46, 22, 0.75),  /* green-950 */
@@ -153,10 +152,25 @@
     rgba(4, 47, 46, 0.75)   /* teal-950  */
   );
 
-  /* انتقال الألوان بسلاسة خلال 300مللي ثانية */
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-duration: 300ms;
 }
+
+.bg-b {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(5, 46, 22, 0.75),  /* green-950 */
+    rgba(23, 37, 84, 0.75),  /* blue-950  */
+    rgba(4, 47, 46, 0.75)   /* teal-950  */
+   );
+
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 300ms;
+}
+
+}
+
+
 
 
 .hero-bg{
@@ -164,7 +178,8 @@
 }
 
 .hero-bg-a{
-  background: rgba(0, 0, 0, 0.70);
+  /* background: rgba(0, 0, 0, 0.35); */
+  /* background: rgba(0, 0, 0, 0.70); */
 }
 
 
@@ -180,4 +195,9 @@
       bg-gradient-to-r from-green-500 to-blue-600 text-white
       transition hover:opacity-90;
   }
+}
+
+
+.logo-img {
+  background-image: url('./logo-w.png');
 }
