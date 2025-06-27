@@ -27,22 +27,15 @@ const features = [
       "Unlock Africa's renewable energy potential and its role in the global green hydrogen economy.",
   },
 ];
- // bg-base-main 
-//  bg-[#FAFCFD]
+
 export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative py-20 
-      
-     bg-[#f1f5f7]
-      
-      
-
-      dark:bg-[#111827] transition-colors duration-300"
+      className="relative py-20 bg-base-main dark:bg-base-card transition-colors duration-300"
     >
       {/* Subtle radial spotlight */}
-      <div className="pointer-events-none absolute inset-0 dark:bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.1),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.1),transparent)]" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
         <h2 className="font-bold text-3xl md:text-4xl text-base-text">
@@ -63,20 +56,13 @@ export default function AboutSection() {
               className="
                 bg-white/80 dark:bg-white/5
                 backdrop-blur-sm
-
-                border
-                 border-teal-300 dark:border-white/10
+                border border-teal-300 dark:border-white/10
                 rounded-xl px-6 py-8
                  duration-300
                 hover:scale-[1.03] hover:backdrop-blur-md
                 hover:cursor-pointer
                 transform transition-transform
-                shadow-lg
-                shadow-gray-500/10
-                hover:shadow-teal-500/20
-                
-                dark:shadow-none
-                "
+              "
             >
               <Icon className="mx-auto mb-4 w-10 h-10 text-teal-500 dark:text-teal-400" />
               <h3 className="text-xl font-semibold text-base-text dark:text-white mb-3">
@@ -95,3 +81,31 @@ export default function AboutSection() {
 
 
 
+{/* <div
+              key={i}
+              className="
+                bg-white/80 dark:bg-white/5
+                backdrop-blur-sm
+
+                border
+                 border-[#f8ca01] dark:border-white/10
+                rounded-xl px-6 py-8
+                 duration-300
+                hover:scale-[1.03] hover:backdrop-blur-md
+                hover:cursor-pointer
+                transform transition-transform
+                shadow-lg
+                shadow-gray-500/10
+                hover:shadow-[#f8ca01]/20
+                
+                dark:shadow-none
+                "
+            >
+              <Icon className="mx-auto mb-4 w-10 h-10 text-[#f8ca01] dark:text-[#ffe15e]" />
+              <h3 className="text-xl font-semibold text-base-text dark:text-white mb-3">
+                {title}
+              </h3>
+              <p className="text-sm text-base-muted dark:text-white/80 leading-snug">
+                {description}
+              </p>
+            </div> */}
